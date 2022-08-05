@@ -2,7 +2,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
-import { setChoose } from '../redux/slices/playSlice'
+import { setChoose, setReset } from '../redux/slices/playSlice'
 
 
 // ICONS
