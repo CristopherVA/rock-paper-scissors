@@ -26,7 +26,7 @@ function MainButton() {
 
    return (
       <>
-         <div className='relative  flex justify-center items-center h-[90%]' >
+         <div className='relative  flex justify-center items-center bottom-10 h-[90%]' >
             <div className='relative'>
 
                {/* Button paper */}
