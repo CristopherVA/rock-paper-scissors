@@ -55,7 +55,7 @@ function MainButton() {
          </div>
 
          <div onClick={() => dispatch(setReset()) } className='absolute bottom-8 left-8 px-5 py-1 border-4 rounded-lg border-white  cursor-pointer text-white ' >
-            <Link href='/game'>
+            <Link href='/'>
                Reset
             </Link>
          </div>
