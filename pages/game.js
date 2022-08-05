@@ -78,10 +78,15 @@ function Game() {
     <>
       <Layout>
 
-        <div className='h-[90%] max-w-6xl mx-auto pt-48'>
+        <div className='h-[90%] max-w-6xl mx-auto pt-24'>
           {playerWin === 'Win' && ( <Confetti className='w-full h-screen' /> ) }    
-                 
-  
+          
+          {
+            playerWin === 'Win' && (
+              <audio src='https://www.youtube.com/watch?v=OJmaBUfKOBY' />
+            ) 
+          }
+
           <div className='flex items-center text-white'>
             <div className='flex flex-1 flex-col justify-center items-center'>
               <div className='  w-20 h-20 md:w-28 md:h-28 xl:w-36 xl:h-36   rounded-full bg-dark-purple flex justify-center items-center'>
@@ -145,7 +150,7 @@ function Game() {
 
           {counter == 0
             ? (
-              <div className=' text-white  w-64 mx-auto mt-24 md:hidden'>
+              <div className=' text-white  w-64 mx-auto mt-14 md:hidden'>
 
                 {playerWin === 'Win' && (<p className='text-4xl font-bold'>YOUR WIN</p>)}
                 {playerWin === 'Lose' && (<p className='text-4xl font-bold'>YOUR LOSE</p>)}
