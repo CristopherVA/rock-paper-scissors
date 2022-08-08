@@ -24,7 +24,7 @@ function Game() {
   const newChooseMachine = () => {
     const choises = ['rock', 'paper', 'scissors', 'rock', 'paper', 'scissors', 'rock', 'paper', 'scissors', 'rock', 'paper', 'scissors', 'rock', 'paper', 'scissors', 'rock', 'paper', 'scissors'];
     const resp = choises[Math.floor(Math.random() * 9)]
-    dispatch(setMachine(resp))  
+    dispatch(setMachine(resp))
   }
 
 
@@ -79,12 +79,12 @@ function Game() {
       <Layout>
 
         <div className='h-[90%] max-w-6xl mx-auto pt-24'>
-          {playerWin === 'Win' && ( <Confetti className='w-full h-screen' /> ) }    
-          
+          {playerWin === 'Win' && (<Confetti className='w-full h-screen' />)}
+
           {
             playerWin === 'Win' && (
               <audio src='https://www.youtube.com/watch?v=OJmaBUfKOBY' />
-            ) 
+            )
           }
 
           <div className='flex items-center text-white'>
@@ -168,11 +168,14 @@ function Game() {
 
         </div>
 
-        <div onClick={() => dispatch(setReset()) } className='absolute bottom-8 left-8 px-5 py-1 border-4 rounded-lg border-white  cursor-pointer text-white ' >
+        <div className='relative bottom-0 max-w-xl mx-auto'>
+          <div onClick={() => dispatch(setReset())} className='absolute bottom-8 left-0 px-5 py-1 border-4 rounded-lg border-white  cursor-pointer text-white ' >
             <Link href='/'>
-               Reset
+              Reset
             </Link>
-         </div>
+          </div>
+
+        </div>
 
       </Layout>
     </>

@@ -11,8 +11,6 @@ export default function Home() {
     <>
       <Layout>
           <MainButton />   
-
-          
       </Layout>
 
     </>

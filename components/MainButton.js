@@ -20,7 +20,8 @@ function MainButton() {
    const dispatch = useDispatch()
 
    const handleChoose = ({ target }) => {
-      dispatch(setChoose(target.dataset.id))
+
+      dispatch(setChoose(target.dataset.id || target.alt))
       push('/game')
    }
 
@@ -48,17 +49,20 @@ function MainButton() {
             </div>
          </div>
 
-         <div className='absolute bottom-8 right-8 px-5 py-1 border-4 rounded-lg border-white  cursor-pointer text-white '>
-            <Link href='/'>
-               Rules
-            </Link>
+         <div className='relative bottom-0 max-w-xl mx-auto'>
+            <div className='absolute bottom-8 right-0 px-5 py-1 border-4 rounded-lg border-white  cursor-pointer text-white '>
+               <Link href='/'>
+                  Rules
+               </Link>
+            </div>
+
+            <div onClick={() => dispatch(setReset())} className='absolute bottom-8 left-0 px-5 py-1 border-4 rounded-lg border-white  cursor-pointer text-white ' >
+               <Link href='/'>
+                  Reset
+               </Link>
+            </div>
          </div>
 
-         <div onClick={() => dispatch(setReset()) } className='absolute bottom-8 left-8 px-5 py-1 border-4 rounded-lg border-white  cursor-pointer text-white ' >
-            <Link href='/'>
-               Reset
-            </Link>
-         </div>
       </>
    )
 }
